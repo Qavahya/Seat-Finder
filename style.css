@@ -88,6 +88,7 @@ button:hover {
 
 #result {
     margin-top: 28px;
+    animation: fadeIn 0.45s ease;
 }
 
 #result p {
@@ -110,4 +111,16 @@ button:hover {
     font-weight: bold;
     line-height: 1.2;
     margin: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
