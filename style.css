@@ -123,4 +123,26 @@ button:hover {
         opacity: 1;
         transform: translateY(0);
     }
+    .flower-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 260px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.flower-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 260px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.card {
+    position: relative;
+    z-index: 2;
+}
 }
