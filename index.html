@@ -1,27 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find Your Seat</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>Find Your Seat</h1>
+    <div class="card">
 
-    <p>Welcome to Sylvia & Darius' Wedding</p>
+        <h1>Find Your Seat</h1>
 
-    <input
-        type="text"
-        id="guestName"
-        placeholder="Enter your full name">
+        <h2>Sylvia & Darius</h2>
 
-    <button onclick="findSeat()">
-        Find My Table
-    </button>
+        <p>
+            We're delighted you're here.
+            <br>
+            Enter your full name below to find your table.
+        </p>
 
-    <h2 id="result"></h2>
+        <input
+            type="text"
+            id="guestName"
+            placeholder="Enter your full name">
+
+        <button onclick="findSeat()">
+            Find My Seat
+        </button>
+
+        <div id="result"></div>
+
+    </div>
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
