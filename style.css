@@ -1,24 +1,22 @@
 body {
     margin: 0;
     min-height: 100vh;
-    background:
-        linear-gradient(rgba(49, 58, 24, 0.92), rgba(49, 58, 24, 0.92)),
-        radial-gradient(circle at top, #5a622e, #2f3818);
+    background: #3f461f;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: Georgia, serif;
-    padding: 24px;
+    padding: 22px;
 }
 
 .card {
     width: 90%;
-    max-width: 460px;
+    max-width: 430px;
     background: #f4ead6;
     border: 2px solid #c8a24a;
-    padding: 48px 30px;
+    padding: 50px 28px;
     text-align: center;
-    box-shadow: 0 20px 55px rgba(0,0,0,0.38);
+    box-shadow: 0 18px 45px rgba(0,0,0,0.35);
     position: relative;
 }
 
@@ -33,78 +31,58 @@ body {
 h1 {
     color: #3f461f;
     text-transform: uppercase;
-    letter-spacing: 7px;
-    font-size: 34px;
-    margin: 0 0 22px;
+    letter-spacing: 6px;
+    font-size: 30px;
     font-weight: normal;
+    margin: 0 0 20px;
 }
 
 h2 {
     color: #b88c35;
     font-style: italic;
     font-weight: normal;
-    font-size: 34px;
-    margin: 0 0 28px;
+    font-size: 32px;
+    margin: 0 0 24px;
 }
 
 p {
     color: #3f461f;
     font-size: 16px;
     line-height: 1.6;
-    margin-bottom: 28px;
+    margin: 0 0 28px;
 }
 
 input {
     width: 100%;
-    padding: 17px;
+    padding: 16px;
     border: 1.5px solid #b88c35;
-    font-size: 16px;
-    box-sizing: border-box;
-    text-align: center;
     background: #fffaf1;
     color: #3f461f;
+    font-size: 16px;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 button {
     width: 100%;
-    margin-top: 18px;
-    padding: 17px;
+    margin-top: 16px;
+    padding: 16px;
     background: #3f461f;
     color: #d9b85d;
     border: 1.5px solid #d9b85d;
     font-size: 14px;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     text-transform: uppercase;
     cursor: pointer;
 }
 
-button:hover {
-    background: #303719;
-}
-
 #result {
-    margin-top: 30px;
+    margin-top: 28px;
     color: #3f461f;
 }
 
 #result h4 {
-    font-size: 36px;
     color: #b88c35;
+    font-size: 36px;
     margin: 8px 0 0;
-    letter-spacing: 2px;
-}
-
-@media (max-width: 480px) {
-    .card {
-        padding: 42px 24px;
-    }
-
-    h1 {
-        font-size: 27px;
-        letter-spacing: 5px;
-    }
-
-    h2 {
-        font-size: 30px;
-    }
 }
