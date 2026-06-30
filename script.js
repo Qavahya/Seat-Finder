@@ -5,11 +5,11 @@ function findSeat() {
     const result = document.getElementById("result");
 
     if (!name) {
-        result.innerHTML = "Please enter your name.";
+        result.innerHTML = "<p>Please enter your name.</p>";
         return;
     }
 
-    result.innerHTML = "Searching...";
+    result.innerHTML = "<p>Searching...</p>";
 
     fetch(`${scriptURL}?name=${encodeURIComponent(name)}`)
         .then(response => response.json())
@@ -22,7 +22,7 @@ function findSeat() {
 
                     <h3>Your table is</h3>
 
-                    <h4>TABLE ${data.table}</h4>
+                    <h4>Table ${data.table}</h4>
                 `;
 
             } else {
