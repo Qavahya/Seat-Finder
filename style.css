@@ -1,67 +1,110 @@
 body {
     margin: 0;
     min-height: 100vh;
-    background: #3f461f;
+    background:
+        linear-gradient(rgba(49, 58, 24, 0.92), rgba(49, 58, 24, 0.92)),
+        radial-gradient(circle at top, #5a622e, #2f3818);
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: Georgia, serif;
+    padding: 24px;
 }
 
 .card {
-    width: 85%;
-    max-width: 430px;
-    background: #f5ead8;
-    border: 2px solid #c9a24d;
-    padding: 45px 28px;
+    width: 90%;
+    max-width: 460px;
+    background: #f4ead6;
+    border: 2px solid #c8a24a;
+    padding: 48px 30px;
     text-align: center;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+    box-shadow: 0 20px 55px rgba(0,0,0,0.38);
+    position: relative;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 12px;
+    border: 1px solid #c8a24a;
+    pointer-events: none;
 }
 
 h1 {
     color: #3f461f;
     text-transform: uppercase;
-    letter-spacing: 6px;
+    letter-spacing: 7px;
     font-size: 34px;
+    margin: 0 0 22px;
+    font-weight: normal;
 }
 
 h2 {
-    color: #b58b35;
+    color: #b88c35;
     font-style: italic;
     font-weight: normal;
-    font-size: 32px;
+    font-size: 34px;
+    margin: 0 0 28px;
 }
 
 p {
     color: #3f461f;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 1.6;
+    margin-bottom: 28px;
 }
 
 input {
     width: 100%;
-    padding: 16px;
-    margin-top: 25px;
-    border: 1.5px solid #b58b35;
+    padding: 17px;
+    border: 1.5px solid #b88c35;
     font-size: 16px;
     box-sizing: border-box;
     text-align: center;
+    background: #fffaf1;
+    color: #3f461f;
 }
 
 button {
     width: 100%;
     margin-top: 18px;
-    padding: 16px;
+    padding: 17px;
     background: #3f461f;
-    color: #d8b45a;
-    border: 1.5px solid #d8b45a;
-    font-size: 15px;
-    letter-spacing: 3px;
+    color: #d9b85d;
+    border: 1.5px solid #d9b85d;
+    font-size: 14px;
+    letter-spacing: 4px;
     text-transform: uppercase;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #303719;
 }
 
 #result {
-    margin-top: 28px;
+    margin-top: 30px;
     color: #3f461f;
-    font-size: 20px;
+}
+
+#result h4 {
+    font-size: 36px;
+    color: #b88c35;
+    margin: 8px 0 0;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 42px 24px;
+    }
+
+    h1 {
+        font-size: 27px;
+        letter-spacing: 5px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
 }
