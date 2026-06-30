@@ -63,6 +63,11 @@ input {
     box-sizing: border-box;
 }
 
+input:focus {
+    outline: none;
+    border-color: #b8872e;
+}
+
 button {
     width: 100%;
     margin-top: 16px;
@@ -74,6 +79,7 @@ button {
     letter-spacing: 3px;
     text-transform: uppercase;
     cursor: pointer;
+    transition: 0.25s ease;
 }
 
 button:hover {
@@ -81,19 +87,20 @@ button:hover {
 }
 
 #result {
-    margin-top: 26px;
+    margin-top: 28px;
 }
 
 #result p {
-    margin: 0 0 12px;
+    margin: 0 0 16px;
     font-size: 16px;
+    color: #3f461f;
 }
 
 #result h3 {
     color: #3f461f;
     font-size: 20px;
-    font-weight: normal;
-    margin: 0 0 4px;
+    font-weight: bold;
+    margin: 0 0 6px;
 }
 
 #result h4 {
