@@ -91,21 +91,23 @@ button:hover {
 }
 
 #result p {
-    margin: 0 0 16px;
+    margin: 0 0 18px;
     font-size: 16px;
     color: #3f461f;
 }
 
 #result h3 {
     color: #3f461f;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
-    margin: 0 0 6px;
+    line-height: 1.2;
+    margin: 0 0 10px;
 }
 
 #result h4 {
     color: #c2953b;
-    font-size: 26px;
+    font-size: 20px;
     font-weight: bold;
+    line-height: 1.2;
     margin: 0;
 }
