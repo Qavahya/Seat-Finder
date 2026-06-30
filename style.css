@@ -81,24 +81,24 @@ button:hover {
 }
 
 #result {
-    margin-top: 28px;
+    margin-top: 26px;
 }
 
-#result p:first-child {
-    margin-bottom: 22px;
+#result p {
+    margin: 0 0 12px;
+    font-size: 16px;
 }
 
 #result h3 {
     color: #3f461f;
     font-size: 20px;
     font-weight: normal;
-    margin: 0;
+    margin: 0 0 4px;
 }
 
 #result h4 {
     color: #c2953b;
-    font-size: 22px;
-    font-weight: normal;
-    letter-spacing: 0.5px;
-    margin: 12px 0 0;
+    font-size: 26px;
+    font-weight: bold;
+    margin: 0;
 }
