@@ -19,9 +19,7 @@ function findSeat() {
 
                 result.innerHTML = `
                     <p>Welcome, ${name}.</p>
-
-                    <h3>Your table is</h3>
-
+                    <h3>You are seated at</h3>
                     <h4>Table ${data.table}</h4>
                 `;
 
