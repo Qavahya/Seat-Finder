@@ -14,17 +14,33 @@ function findSeat() {
     fetch(`${scriptURL}?name=${encodeURIComponent(name)}`)
         .then(response => response.json())
         .then(data => {
+
             if (data.found) {
+
                 result.innerHTML = `
                     <p>Welcome, ${name}.</p>
-                    <h3>You are seated at</h3>
-                    <h4>${data.table}</h4>
+
+                    <h3>Your table is</h3>
+
+                    <h4>TABLE ${data.table}</h4>
                 `;
+
             } else {
-                result.innerHTML = "We couldn't find that name. Please check the spelling or ask someone for help.";
+
+                result.innerHTML = `
+                    <p>We couldn't find that name.</p>
+                    <p>Please check the spelling or ask a member of the wedding party for assistance.</p>
+                `;
+
             }
+
         })
         .catch(() => {
-            result.innerHTML = "Something went wrong. Please try again.";
+
+            result.innerHTML = `
+                <p>Something went wrong.</p>
+                <p>Please try again.</p>
+            `;
+
         });
 }
