@@ -91,7 +91,7 @@ button:hover {
 }
 
 #result p {
-    margin: 0 0 18px;
+    margin: 0 0 20px;
     font-size: 16px;
     color: #3f461f;
 }
@@ -101,12 +101,12 @@ button:hover {
     font-size: 18px;
     font-weight: bold;
     line-height: 1.2;
-    margin: 0 0 10px;
+    margin: 0 0 16px;
 }
 
 #result h4 {
     color: #c2953b;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     line-height: 1.2;
     margin: 0;
