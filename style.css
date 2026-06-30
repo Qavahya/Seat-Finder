@@ -38,7 +38,7 @@ h1 {
 }
 
 h2 {
-    color: #b88c35;
+    color: #c2953b;
     font-style: italic;
     font-weight: normal;
     font-size: 32px;
@@ -55,7 +55,7 @@ p {
 input {
     width: 100%;
     padding: 16px;
-    border: 1.5px solid #b88c35;
+    border: 1.5px solid #c8a24a;
     background: #fffaf1;
     color: #3f461f;
     font-size: 16px;
@@ -84,17 +84,21 @@ button:hover {
     margin-top: 28px;
 }
 
+#result p:first-child {
+    margin-bottom: 22px;
+}
+
 #result h3 {
     color: #3f461f;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: normal;
-    margin-bottom: 6px;
+    margin: 0;
 }
 
 #result h4 {
-    color: #c39a42;
-    font-size: 28px;
+    color: #c2953b;
+    font-size: 22px;
     font-weight: normal;
-    letter-spacing: 1px;
-    margin-top: 0;
+    letter-spacing: 0.5px;
+    margin: 12px 0 0;
 }
