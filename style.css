@@ -76,13 +76,25 @@ button {
     cursor: pointer;
 }
 
+button:hover {
+    background: #4b5326;
+}
+
 #result {
     margin-top: 28px;
+}
+
+#result h3 {
     color: #3f461f;
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 6px;
 }
 
 #result h4 {
-    color: #b88c35;
-    font-size: 36px;
-    margin: 8px 0 0;
+    color: #c39a42;
+    font-size: 28px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin-top: 0;
 }
