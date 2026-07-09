@@ -24,7 +24,6 @@ function findSeat() {
     fetch(`${scriptURL}?name=${encodeURIComponent(name)}`)
         .then(response => response.json())
         .then(data => {
-
             if (!data.found) {
                 result.innerHTML = `
                     <p>We couldn't find that name.</p>
@@ -37,35 +36,32 @@ function findSeat() {
                 result.innerHTML = `
                     <p>We found more than one ${name}.</p>
                     <h3>Please select your name</h3>
-                    <div class="name-options">
-                        ${data.matches.map(match => `
-                            <button class="name-option" onclick="showSeat('${match.displayName}', '${match.table}')">
-                                ${match.displayName}
-                            </button>
-                        `).join("")}
-                    </div>
+                    <div class="name-options"></div>
                 `;
+
+                const optionsContainer = document.querySelector(".name-options");
+
+                data.matches.forEach(match => {
+                    const button = document.createElement("button");
+                    button.className = "name-option";
+                    button.textContent = match.displayName;
+
+                    button.addEventListener("click", function () {
+                        showSeat(match.displayName, match.table);
+                    });
+
+                    optionsContainer.appendChild(button);
+                });
+
                 return;
             }
 
             showSeat(data.displayName, data.table);
-
         })
         .catch(() => {
             result.innerHTML = `
                 <p>Something went wrong.</p>
                 <p>Please try again.</p>
             `;
-        });
-}
-
-        })
-        .catch(() => {
-
-            result.innerHTML = `
-                <p>Something went wrong.</p>
-                <p>Please try again.</p>
-            `;
-
         });
 }
