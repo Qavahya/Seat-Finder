@@ -6,7 +6,7 @@ function showSeat(displayName, table) {
     result.innerHTML = `
         <p>Welcome, ${displayName}.</p>
         <h3>You are seated at</h3>
-        <h4>Table ${table}</h4>
+        <h4>${table}</h4>
     `;
 }
 
@@ -58,7 +58,9 @@ function findSeat() {
 
             showSeat(data.displayName, data.table);
         })
-        .catch(() => {
+        .catch(error => {
+            console.error("Seat finder error:", error);
+
             result.innerHTML = `
                 <p>Something went wrong.</p>
                 <p>Please try again.</p>
