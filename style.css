@@ -113,6 +113,34 @@ button:hover {
     margin: 0;
 }
 
+.name-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.name-option {
+    width: 100%;
+    padding: 14px;
+    background: #505f4a;
+    color: #d9b85d;
+    border: 1.5px solid #d9b85d;
+    border-radius: 0;
+    font-size: 15px;
+    font-family: Georgia, serif;
+    font-weight: normal;
+    letter-spacing: 0;
+    text-transform: none;
+    cursor: pointer;
+    transition: 0.25s ease;
+    margin-top: 0;
+}
+
+.name-option:hover {
+    background: #465541;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -123,4 +151,4 @@ button:hover {
         opacity: 1;
         transform: translateY(0);
     }
-  
+}
