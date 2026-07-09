@@ -1,11 +1,21 @@
 const scriptURL = "https://script.google.com/macros/s/AKfycbyVcWH3UROK3-wkFkY0OsGkP441MLtnbayVEwLdtdnMTmg44eHJVyIft73IZwd_AwTklg/exec";
 
+function showSeat(displayName, table) {
+    const result = document.getElementById("result");
+
+    result.innerHTML = `
+        <p>Welcome, ${displayName}.</p>
+        <h3>You are seated at</h3>
+        <h4>Table ${table}</h4>
+    `;
+}
+
 function findSeat() {
     const name = document.getElementById("guestName").value.trim();
     const result = document.getElementById("result");
 
     if (!name) {
-        result.innerHTML = "<p>Please enter your name.</p>";
+        result.innerHTML = "<p>Please enter your first name.</p>";
         return;
     }
 
@@ -15,22 +25,39 @@ function findSeat() {
         .then(response => response.json())
         .then(data => {
 
-            if (data.found) {
-
-                result.innerHTML = `
-                    <p>Welcome, ${name}.</p>
-                    <h3>You are seated at</h3>
-                    <h4>Table ${data.table}</h4>
-                `;
-
-            } else {
-
+            if (!data.found) {
                 result.innerHTML = `
                     <p>We couldn't find that name.</p>
                     <p>Please check the spelling or ask a member of the wedding party for assistance.</p>
                 `;
-
+                return;
             }
+
+            if (data.multiple) {
+                result.innerHTML = `
+                    <p>We found more than one ${name}.</p>
+                    <h3>Please select your name</h3>
+                    <div class="name-options">
+                        ${data.matches.map(match => `
+                            <button class="name-option" onclick="showSeat('${match.displayName}', '${match.table}')">
+                                ${match.displayName}
+                            </button>
+                        `).join("")}
+                    </div>
+                `;
+                return;
+            }
+
+            showSeat(data.displayName, data.table);
+
+        })
+        .catch(() => {
+            result.innerHTML = `
+                <p>Something went wrong.</p>
+                <p>Please try again.</p>
+            `;
+        });
+}
 
         })
         .catch(() => {
