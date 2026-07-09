@@ -19,7 +19,7 @@ function findSeat() {
         return;
     }
 
-    result.innerHTML = "<p>Searching...</p>";
+    result.innerHTML = "<p>One Moment Please...</p>";
 
     fetch(`${scriptURL}?name=${encodeURIComponent(name)}`)
         .then(response => response.json())
